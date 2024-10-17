@@ -3,13 +3,13 @@ import React from "react";
 import logoImage from "../assets/image/loginImage.jpg";
 import LoginBg from "../assets/image/LoginBg.png";
 
-export default function Login() {
+export default function Login({ signUp, login }) {
   return (
     <section
-      class="text-gray-600 body-font  h-screen flex justify-items-center align-middle items-center bg-custom-bg bg-cover bg-center"
+      className="text-gray-600 body-font   h-screen flex justify-items-center align-middle items-center bg-custom-bg bg-cover bg-center"
       style={{ backgroundImage: `url(${LoginBg})` }}
     >
-      <div class="container bg-white bg-opacity-75 mx-auto flex px-5 py-5 md:flex-row flex-col items-center h-fit rounded-2xl w-fit">
+      <div class="container bg-white bg-opacity-75 mx-auto flex px-5 py-5 md:flex-row flex-col items-center h-fit  shadow-slate-500 shadow-md rounded-2xl w-fit">
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
           <img
             class="saturate-150 object-cover object-center rounded-lg  shadow-2xl "
@@ -78,21 +78,23 @@ export default function Login() {
           </div>
 
           <button
+
             class="mb-4 w-full text-white bg-red-500  py-2 px-6 outline-red-500 hover:bg-red-700 border-2 border-red-500 rounded-full text-lg text-center transition-colors duration-200 ease-in-out"
             type="submit"
+            onClick={login}
           >
             LOGIN
           </button>
           <button
             class=" w-full text-red-500 bg-white  border-red-500 border-2 py-2 px-6 outline-red-500 hover:bg-red-700 hover:text-white rounded-full text-lg text-center transition-colors duration-200 ease-in-out"
             type="submit"
+            onClick={signUp}
           >
             SIGN UP
           </button>
         </form>
       </div>
     </section>
-
     // <form action="" method="post">
     //   <h2>Login to your Account</h2>
     //   <p>ComLab Utilization Monitoring System</p>

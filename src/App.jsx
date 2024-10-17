@@ -1,10 +1,10 @@
 import React from 'react'
-import Login from './components/Login.jsx'
+import Layout from './components/Layout.jsx'
 
 export default function App() {
   return (
     <div >
-        <Login/>
+        <Layout/>
     </div>
   )
 }
